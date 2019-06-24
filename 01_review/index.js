@@ -1,12 +1,3 @@
-const createDog = (name, age, weight) => {
-  return {
-    name,
-    age,
-    weight
-  };
-
-};
-const dog = createDog('spot', 5, '20 lbs');
+const createDog = require ('./create-dog');
+const dog = createDog(process.argv[2], process.argv[3], process.argv[4]);
 console.log(dog);
-
-module.exports = createDog;
